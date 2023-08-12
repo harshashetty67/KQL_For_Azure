@@ -1,5 +1,6 @@
-### Search operator:
+### **Search operator**:
 
+```
 // 'search' operator => kusto does case-insensitive search by default
 Perf
 | search "Memory"
@@ -40,8 +41,13 @@ Perf
 Perf
 | search \* matches regex "[A-Z]:"
 
-### Where operator :
+```
 
+==========================================================
+
+### **Where operator** :
+
+```
 // 'where' operator => fetching rows based on a condition
 Perf
 | where TimeGenerated > ago(5h) and CounterValue > 1000000
@@ -57,3 +63,4 @@ Perf
 //Regex
 Perf
 | where \* matches regex "[0-9]"
+```
